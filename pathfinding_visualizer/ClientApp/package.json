@@ -1,4 +1,5 @@
 {
+  "homepage": "https://notifyObservers.github.io/pathfinding_visualize",
   "name": "pathfinding_visualizer",
   "version": "0.1.0",
   "private": true,
@@ -13,6 +14,8 @@
     "rimraf": "^2.6.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh -pages -d build",
     "start": "rimraf ./build && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
