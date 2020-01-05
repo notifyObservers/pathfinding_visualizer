@@ -53,21 +53,25 @@ export default class PathfindingVisualizer extends Component {
 
     animateDijkstra(visited,path) {
         for (let i = 0; i < visited.length; i++) {
-            if (i === visited.length-1) {
+            /*if (i === visited.length-1) {
                 setTimeout(() => {
                     this.animateShortestPath(path);
                 }, 10 * i);
                 return;
+            }*/
+            const node = visited[i];
+            if (visited[i].isPath) {
+                document.getElementById(`node-${node.row}-${node.col}`).className =
+                    'node node-on-path';
             }
             setTimeout(() => {
-                const node = visited[i];
                 document.getElementById(`node-${node.row}-${node.col}`).className =
                     'node node-visited';
             }, 10 * i);
         }
     }
 
-    animateShortestPath(nodesInShortestPathOrder) {
+    /*animateShortestPath(nodesInShortestPathOrder) {
         for (let i = 0; i < nodesInShortestPathOrder.length; i++) {
             setTimeout(() => {
                 const node = nodesInShortestPathOrder[i];
@@ -75,7 +79,7 @@ export default class PathfindingVisualizer extends Component {
                     'node node-shortest-path';
             }, 50 * i);
         }
-    }
+    }*/
 
 
     animation() {
