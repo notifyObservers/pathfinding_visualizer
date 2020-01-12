@@ -1,6 +1,6 @@
 ﻿.grid {
-    margin: 5%;
-    width: 1000px;
+    margin-left: 2vw;
+    width: 95vw;
 }
 
 .ControlPanel {
@@ -11,12 +11,15 @@
 .top_button {
     background: #fff;
     border: 1px solid #999;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
-    padding: 0;
+    line-height: 34px;
+    height: 40px;
     text-align: center;
-    width: 15%;
-    height: 5%;
+}
+
+.body {
+    text-align: center;
 }
 
 .top_button:hover {

@@ -17,27 +17,24 @@ export default class Node extends Component {
         }
     }
 
-    setDistance(number) {
-        this.setState({ distance: number });
-    }
-
+       
     render() {
         //const onpath = this.state.isPath ? "node-on-path" : ""; 
         if (this.props.isStart) {
             return (
-                <div id={`node-${this.props.row}-${this.props.col}`} className={'node node-start'}>
+                <div id={`node-${this.props.row}-${this.props.col}`} className={'node node-start'} onClick={()=>this.props.onClick()}>
                 </div>
             );
         }
         else if (this.props.isFinish) {
             return (
-                <div id={`node-${this.props.row}-${this.props.col}`} className={'node node-finish'}>
+                <div id={`node-${this.props.row}-${this.props.col}`} className={'node node-finish'} onClick={() => this.props.onClick()}>
                 </div>
             );
         }
         else {
             return (
-                <div id={`node-${this.props.row}-${this.props.col}`} className={'node'}>
+                <div id={`node-${this.props.row}-${this.props.col}`} className={'node'} onClick={() => this.props.onClick()}>
                 </div>
             );
         }
